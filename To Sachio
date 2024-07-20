@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Sachio</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <button onclick="showAlert()">Click this to Start</button>
+
+    <script>
+        function showAlert() {
+            Swal.fire({
+                title: 'Hello Sachio!',
+                text: 'Punya waktu buat dengar sesuatu yang menarik?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Apa tuh?',
+                cancelButtonText: 'Nggak mau tahu',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Tahukah kamu?',
+                        text: 'Dalam psikologi, ada yang namanya hukum timbal balik atau reciprocation.',
+                        icon: 'info',
+                        confirmButtonText: 'Terus?',
+                    }).then(() => {
+                        Swal.fire({
+                            title: 'Jadi begini...',
+                            text: 'Setiap kali kamu memberi afirmasi atau dukungan, aku merasa perlu membalasnya dengan sesuatu yang setara atau lebih.',
+                            icon: 'info',
+                            confirmButtonText: 'Maksudnya?',
+                        }).then(() => {
+                            Swal.fire({
+                                title: 'Let me explain...',
+                                text: 'Your positive affirmations and kindness have made a significant impact on me. It’s only logical that I respond in kind.',
+                                icon: 'heart',
+                                confirmButtonText: 'Yes, and?',
+                            }).then(() => {
+                                Swal.fire({
+                                    title: 'So, here’s the thing...',
+                                    text: 'I’ve come to realize that my reciprocation is not just about returning a favor, but because I genuinely like you.',
+                                    icon: 'heart',
+                                    confirmButtonText: 'Really?',
+                                }).then(() => {
+                                    Swal.fire({
+                                        title: 'Yes, really!',
+                                        text: 'If my life were a design project, you’d be the perfect element that completes my composition. In the study of human cultures, every interaction tells a story. Ours is just beginning, and I’d love to explore this narrative with you. It’s simple yet profound: I like you, Sachio. So, your answer is?',
+                                        icon: 'success',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Let‘s write our narrative together!',
+                                        cancelButtonText: 'Let me think...',
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            Swal.fire({
+                                                title: 'Yatta!',
+                                                text: 'I trust fate to do its magic, but in the meantime, know that my heart is already yours. Whatever happens, I believe in us!',
+                                                icon: 'success',
+                                                confirmButtonText: 'Me too!',
+                                            });
+                                        } else if (result.dismiss === Swal.DismissReason.cancel) {
+                                            Swal.fire({
+                                                title: 'That’s okay!',
+                                                text: 'I’ll wait for your answer. 😊',
+                                                icon: 'info',
+                                                confirmButtonText: 'Terima kasih!',
+                                            });
+                                        }
+                                    });
+                                });
+                            });
+                        });
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
